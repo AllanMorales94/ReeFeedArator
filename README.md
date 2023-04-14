@@ -30,7 +30,8 @@
 
 ## :link: Associated Links:
 
-Click the following link to be redirected to the planning board of the code! [Trello]()
+Click the following link to be redirected to the planning board of the code! [Trello](https://trello.com/b/KEvts9jv/refeed-refeedarator)
+[Lucid Chart](https://lucid.app/lucidspark/9e45f2b9-1689-4085-907d-4c75da22dfa4/edit?invitationId=inv_146ad15e-054d-4034-a8ec-e30034355072&page=0_0#)
   
 </div>
 
