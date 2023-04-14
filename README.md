@@ -6,7 +6,7 @@
 
 # ReeFeedArator
 
-### Built by:  **[Allan Moralles](https://www.linkedin.com/in/ivanallin/)**
+### Built by:  **[Allan Morales](https://www.linkedin.com/in/ivanallin/)**
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 ![React badge](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![JS badge](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
