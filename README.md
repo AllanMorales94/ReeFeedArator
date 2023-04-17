@@ -4,9 +4,10 @@
 
 ###
 
-# ReeFeedArator
+# ReFeedArator
 
-### Built by:  **[Allan Morales](https://www.linkedin.com/in/ivanallin/)**
+### Built by: **[Allan Morales](https://www.linkedin.com/in/ivanallin/)**
+
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 ![React badge](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![JS badge](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
@@ -19,10 +20,9 @@
 ![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
 
-  
 **_Click the following link to be redirected to the live version of the code!_**
 
-## 
+##
 
 ### Description:
 
@@ -30,9 +30,9 @@
 
 ## :link: Associated Links:
 
-Click the following link to be redirected to the planning board of the code! [Trello](https://trello.com/b/KEvts9jv/refeed-refeedarator), 
+Click the following link to be redirected to the planning board of the code! [Trello](https://trello.com/b/KEvts9jv/refeed-refeedarator),
 [Lucid Chart](https://lucid.app/lucidspark/9e45f2b9-1689-4085-907d-4c75da22dfa4/edit?invitationId=inv_146ad15e-054d-4034-a8ec-e30034355072&page=0_0#)
-  
+
 </div>
 
 ## :camera_flash: Visuals and Helpful Insight (Getting Started):
@@ -41,15 +41,12 @@ Click the following link to be redirected to the planning board of the code! [Tr
 
 ![loginPage]()
 
-
-
 ### Main Page
 
 ![indexpage]()
 
-
-
 ## :computer: Technologies Used
+
 - ![React badge](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 - ![CSS badge](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 - ![JS badge](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
@@ -65,9 +62,6 @@ Click the following link to be redirected to the planning board of the code! [Tr
 
 ```
 
-### 
+###
 
 ## :chart_with_upwards_trend: Looking Forward
-
-
-

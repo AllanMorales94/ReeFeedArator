@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import './App.css'
+import ProfilePage from '../ProfilePage/ProfilePage'
 import FoodListPage from '../FoodListPage/FoodListPage'
-import RestockListPage from '../RestockListPage/RestockListPage'
+import ShoppingListPage from '../ShoppingListPage/ShoppingListPage'
 import AuthPage from '../AuthPage/AuthPage'
 import { Routes, Route } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar'
@@ -22,8 +23,9 @@ export default function App() {
         <>
           <NavBar user={user} updateUser={updateUser}/>
           <Routes>
-            <Route path="/orders/" element={<RestockListPage />} />
-            <Route path="/orders/new" element={<FoodListPage />} />
+            <Route path="/shoppinglist/" element={<ShoppingListPage />} />
+            <Route path="/foodlist/new" element={<FoodListPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
           </Routes>
         </>
         :

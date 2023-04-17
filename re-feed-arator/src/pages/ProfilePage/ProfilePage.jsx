@@ -1,7 +1,7 @@
 import React from 'react'
 import { checkToken } from '../../utilities/users-service'
 
-export default function RestockListPage() {
+export default function ProfilePage() {
 
   async function handleCheckToken(){
    const expDate = await checkToken()
@@ -10,7 +10,7 @@ export default function RestockListPage() {
 
   return (
     <>
-      <h1>RestockListPage</h1>
+      <h1>Profile Page</h1>
       <button onClick={handleCheckToken}>Check When My Login Expires</button>
     </>
   )
