@@ -33,13 +33,13 @@ export default function LoginForm({ setUser }) {
   return (
     <div>
       <div className="form-container">
-        <h3>Welcome to ReFeedArator,  ReFeedMe because a well stocked fridge is a happy fridge.</h3>
+        <h1>Welcome to ReFeedArator,  ReFeedMe because a well stocked fridge is a happy fridge.</h1>
         <form autoComplete="off" onSubmit={handleSubmit}>
-          <label>Email</label>
+          <label>Email </label>
           <input type="text" name="email" value={credentials.email} onChange={handleChange} required /> <br />
-          <label>Password</label>
+          <label>Password </label>
           <input type="password" name="password" value={credentials.password} onChange={handleChange} required /> <br />
-          <button type="submit">LOG IN</button>
+          <button type="submit">Log in</button>
         </form>
       </div>
       <p className="error-message">&nbsp;{error}</p>

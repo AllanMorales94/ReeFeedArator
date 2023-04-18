@@ -3,6 +3,7 @@ import './App.css'
 import ProfilePage from '../ProfilePage/ProfilePage'
 import FoodListPage from '../FoodListPage/FoodListPage'
 import ShoppingListPage from '../ShoppingListPage/ShoppingListPage'
+import AddItemPage from '../AddItemPage/AddItemPage'
 import AuthPage from '../AuthPage/AuthPage'
 import { Routes, Route } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar'
@@ -23,9 +24,11 @@ export default function App() {
         <>
           <NavBar user={user} updateUser={updateUser}/>
           <Routes>
+
             <Route path="/shoppinglist/" element={<ShoppingListPage />} />
-            <Route path="/foodlist/new" element={<FoodListPage />} />
+            <Route path="/foodlist" element={<FoodListPage />} />
             <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/addnewitem" element={<AddItemPage />} />
           </Routes>
         </>
         :
