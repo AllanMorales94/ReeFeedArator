@@ -1,16 +1,21 @@
 import { useState } from 'react'
 import './App.css'
-import ProfilePage from '../ProfilePage/ProfilePage'
 import FoodListPage from '../FoodListPage/FoodListPage'
-import ShoppingListPage from '../ShoppingListPage/ShoppingListPage'
-import AddItemPage from '../AddItemPage/AddItemPage'
+import AddItemPage from '../../components/AddItemPage/AddItemPage'
 import AuthPage from '../AuthPage/AuthPage'
 import { Routes, Route } from 'react-router-dom';
-import NavBar from '../../components/NavBar/NavBar'
+import NavBar from '../NavBar/NavBar'
 import { getUser } from '../../utilities/users-service';
+
 export default function App() {
 
   const [user, setUser] = useState(getUser())
+  const [items, setItems] = useState([])
+  
+  function addItem(item) {
+    setItems(items => [...items, item]);
+  }
+  
 
   function updateUser(userState){
     setUser(userState)
@@ -23,11 +28,8 @@ export default function App() {
         <>
           <NavBar user={user} updateUser={updateUser}/>
           <Routes>
-
-            <Route path="/shoppinglist/" element={<ShoppingListPage />} />
             <Route path="/foodlist" element={<FoodListPage />} />
-            <Route path="/profile" element={<ProfilePage />} />
-            <Route path="/addnewitem" element={<AddItemPage />} />
+            <Route path="/addnewitem" element={<AddItemPage addItem={addItem} />} />
           </Routes>
         </>
         :
