@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { create } from "../../utilities/items-api";
 import * as itemAPI from "../../utilities/items-api"
 
-export default function GroceryListForm() {
+export default function AddItemPage({setItems, items}) {
 
-  const [item, setItem] = useState("");
-  const [quantity, setQuantity] = useState("");
-  const [groceryList, setGroceryList] = useState([]);
+  const [name, setName] = useState("");
+  const [quantity, setQuantity] = useState(0);
+  
 
   // useEffect(function() {
   //   async function getItems() {
@@ -16,21 +16,34 @@ export default function GroceryListForm() {
   //   getItems();
   // }, [groceryList]);
 
-
+  const handleNameChange = (e) => {
+     setName(e.target.value)
+  }
+  const handleQuantityChange = (e) => {
+    setQuantity(e.target.value)
+ }
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setGroceryList( { name: item, quantity: quantity });
+    const newItem = {
+      name,
+      quantity
+    }
+    
     try {
-      console.log(item)
+      console.log(name)
       console.log(quantity)
-      console.log(groceryList)
-      await itemAPI.create(groceryList)
+      console.log(newItem)
+      const createdItem = await create(newItem)
+      console.log(createdItem)
+      setItems([...items, {name: name, quantity: quantity }])
     } catch (error){
     
     }
-    setItem("");
-    setQuantity("");
+    setName("");
+    setQuantity(0);
   };
+      
+
     
 
     
@@ -44,10 +57,10 @@ export default function GroceryListForm() {
         <label>
           Item:
           <input
-            name="item"
+            name="name"
             type="text"
-            value={item}
-            onChange={(e) => setItem(e.target.value)}
+            value={name}
+            onChange={handleNameChange}
           />
         </label>
         <br />
@@ -57,7 +70,7 @@ export default function GroceryListForm() {
             name="quantity"
             type="number"
             value={quantity}
-            onChange={(e) => setQuantity(e.target.value)}
+            onChange={handleQuantityChange}
           />
         </label>
         <br />

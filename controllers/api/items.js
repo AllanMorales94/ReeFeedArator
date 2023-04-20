@@ -12,9 +12,18 @@ async function index(req, res) {
     res.json(items);
 }
 async function create(req, res) {
-    const items = await Item.create(req.body);
-    res.json(items);
-}
+    try {
+      const newItem = new Item({
+        name: req.body.name,
+        quantity: req.body.quantity
+      });
+      const savedItem = await newItem.save();
+      res.json(savedItem);
+    } catch (err) {
+      console.error(err);
+      res.status(503).json({ message: 'Error creating new item' });
+    }
+  }
 
 async function remove(req, res) {
     const items = await Item.find({});

@@ -12,7 +12,7 @@ export default function App() {
 
   const [user, setUser] = useState(getUser())
   const [items, setItems] = useState([])
-
+  
   function addItem(item) {
     setItems(items => [...items, item]);
   }
@@ -30,8 +30,8 @@ export default function App() {
           <NavBar user={user} updateUser={updateUser}/>
           <Routes>
             <Route path="/foodlistpage" element={<FoodListPage />} />
-            <Route path="/addnewitempage" element={<AddItemPage addItem={addItem} />} />
-            <Route path="/grocerylistpage" element={<GroceryListPage />} />
+            <Route path="/addnewitempage" element={<AddItemPage setItems={setItems} items={items} addItem={addItem} />} />
+            <Route path="/grocerylistpage" element={<GroceryListPage items={items}/>} />
           </Routes>
         </>
         :
