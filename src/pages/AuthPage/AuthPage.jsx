@@ -9,7 +9,6 @@ export default function AuthPage({setUser}) {
     <main>
       <div>
       </div>
-      {/* <h1>{signUp? "Sign Up" : "Log In"}</h1> */}
     {signUp ? <SignUpForm setUser={setUser}/>:<LoginForm setUser={setUser}/>}
 
         <button onClick={() => setSignupForm(!signUp)}>{signUp ? " Sign In" : "Sign Up"}

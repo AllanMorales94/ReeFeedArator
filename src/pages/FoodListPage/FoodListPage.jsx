@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-import Item from '../../components/Item/Item'
+
+import MonitoredItemList from '../../components/MonitoredItemList/MonitoredItemList';
 
 export default function FoodListPage() {
   const [items, setItems] = useState([]);
@@ -13,7 +14,7 @@ export default function FoodListPage() {
   return (
     <div>
       <h1>Food List</h1>
-      <Item items={items} onAddItem={handleAddItem} />
+      <MonitoredItemList items={items} />
     </div>
   );
 }

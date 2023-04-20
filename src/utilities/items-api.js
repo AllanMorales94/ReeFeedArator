@@ -7,8 +7,8 @@ export function getAll() {
   return sendRequest(BASE_URL);
 }
 
-export function createItem(credentials) {
-  return sendRequest(`${BASE_URL}/new`,"POST", credentials);
+export function create(groceryItem) {
+  return sendRequest(`${BASE_URL}/new`, 'POST', groceryItem);
 }
 // Won't be used in SEI CAFE, but demonstrates
 // what you might need if you have a, for example,
@@ -16,3 +16,4 @@ export function createItem(credentials) {
 export function getById(id) {
   return sendRequest(`${BASE_URL}/${id}`);
 }
+

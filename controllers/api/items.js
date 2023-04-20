@@ -12,9 +12,10 @@ async function index(req, res) {
     res.json(items);
 }
 async function create(req, res) {
-    const items = await Item.find({});
+    const items = await Item.create(req.body);
     res.json(items);
 }
+
 async function remove(req, res) {
     const items = await Item.find({});
     res.json(items);
