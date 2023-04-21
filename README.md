@@ -71,4 +71,5 @@ To complete my user stories:
 AAU, I want to be able to edit my list of monitored items at any time.
 <br >
 AAU, I want to be able to delete an item list.
+<br >
 AAU, I want to receive a notification when an item in my list is running low or has run out.
