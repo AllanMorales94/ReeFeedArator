@@ -30,8 +30,12 @@ async function create(req, res) {
 
 
   async function remove(req, res) {
+
+    console.log("Checking req", req.body)
+    console.log("Checking req", req.body.id)
     try {
-      const item = await Item.findByIdAndDelete(req.params.id);
+      const item = await Item.findByIdAndDelete(req.body.id);
+      console.log(item)
       res.json({ success: true, item });
     } catch (error) {
       console.log(error);
@@ -41,8 +45,19 @@ async function create(req, res) {
   
 
 
-async function edit(req, res) {
-    const items = await Item.find({});
-    res.json(items);
-}
-
+  async function edit(req, res) {
+    try {
+      const item = await Item.findByIdAndUpdate(
+        req.body.id,
+        { name: req.body.name, quantity: req.body.quantity },
+        { new: true }
+      );
+      if (!item) {
+        return res.status(404).json({ message: 'Item not found' });
+      }
+      res.json(item);
+    } catch (error) {
+      console.error(error);
+      res.status(503).json({ message: 'Error editing item' });
+    }
+  }

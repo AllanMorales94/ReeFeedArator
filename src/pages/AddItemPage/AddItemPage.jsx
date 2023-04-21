@@ -18,7 +18,7 @@ export default function AddItemPage({setItems, items}) {
     e.preventDefault();
     const newItem = {
       name,
-      quantity
+      quantity,
     }
     
     try {
@@ -27,7 +27,7 @@ export default function AddItemPage({setItems, items}) {
       console.log(newItem)
       const createdItem = await create(newItem)
       console.log(createdItem)
-      setItems([...items, {name: name, quantity: quantity }])
+      setItems([...items, {name: name, quantity: quantity, id: createdItem._id }])
     } catch (error){
     
     }

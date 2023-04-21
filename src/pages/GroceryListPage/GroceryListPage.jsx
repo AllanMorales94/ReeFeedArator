@@ -8,12 +8,13 @@ export default function GroceryListPage({ items, handleDelete }) {
         {items.map((item, index) => (
           <li key={index}>
             {item.name} - {item.quantity}
-            <button onClick={() => handleDelete(index)}>Delete</button>
+            <button onClick={() => handleDelete(item._id)}>Delete</button>
           </li>
         ))}
       </ul>
     </div>
   );
 };
+
 
 

@@ -65,3 +65,9 @@ Click the following link to be redirected to the planning board of the code! [Tr
 ###
 
 ## :chart_with_upwards_trend: Looking Forward
+
+To complete my user stories:
+
+AAU, I want to be able to edit my list of monitored items at any time.
+AAU, I want to be able to delete an item list.
+AAU, I want to receive a notification when an item in my list is running low or has run out.
