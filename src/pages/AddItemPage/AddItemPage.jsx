@@ -1,20 +1,12 @@
 import React, { useState } from "react";
 import { create } from "../../utilities/items-api";
-import * as itemAPI from "../../utilities/items-api"
+
 
 export default function AddItemPage({setItems, items}) {
 
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState(0);
   
-
-  // useEffect(function() {
-  //   async function getItems() {
-  //     const item = await itemAPI.getAll();
-  //     setGroceryList(item);
-  //   }
-  //   getItems();
-  // }, [groceryList]);
 
   const handleNameChange = (e) => {
      setName(e.target.value)
@@ -43,12 +35,6 @@ export default function AddItemPage({setItems, items}) {
     setQuantity(0);
   };
       
-
-    
-
-    
-   
-
 
   return (
     <>
@@ -79,6 +65,11 @@ export default function AddItemPage({setItems, items}) {
     </>
   );
 };
+    
+
+    
+   
 
 
-// create a form 
+
+

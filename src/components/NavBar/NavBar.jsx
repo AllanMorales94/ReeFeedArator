@@ -12,8 +12,6 @@ export default function NavBar({user, updateUser}) {
   return (
     <nav>
       <h2>Welcome, {user.name}</h2>
-      <button><Link to="/foodlistpage">List</Link></button>
-      &nbsp; | &nbsp;
       <button><Link to="/addnewitempage">Add Item</Link></button>
       &nbsp; | &nbsp;
       <button><Link to="/grocerylistpage">Grocery List</Link></button>

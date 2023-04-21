@@ -17,3 +17,6 @@ export function getById(id) {
   return sendRequest(`${BASE_URL}/${id}`);
 }
 
+// export function deleteItem(id) {
+//   return sendRequest(`${BASE_URL}/${id}`, 'DELETE');
+// }

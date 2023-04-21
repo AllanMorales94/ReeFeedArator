@@ -7,10 +7,13 @@ module.exports = {
     edit
 };
 
+
 async function index(req, res) {
     const items = await Item.find({});
     res.json(items);
 }
+
+
 async function create(req, res) {
     try {
       const newItem = new Item({
@@ -25,10 +28,19 @@ async function create(req, res) {
     }
   }
 
-async function remove(req, res) {
-    const items = await Item.find({});
-    res.json(items);
-}
+
+  async function remove(req, res) {
+    try {
+      const item = await Item.findByIdAndDelete(req.params.id);
+      res.json({ success: true, item });
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({ success: false, error: "Failed to delete item." });
+    }
+  }
+  
+
+
 async function edit(req, res) {
     const items = await Item.find({});
     res.json(items);
